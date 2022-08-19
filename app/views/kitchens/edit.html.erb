@@ -1,0 +1,25 @@
+<h1>Edit Items</h1>
+
+
+<% if @kitchen.errors.any? %> 
+  <h2>The following errors prevented the article from being saved</h2> 
+  <ul> 
+    <% @kitchen.errors.full_messages.each do |msg| %> 
+      <li><%= msg %></li> 
+    <% end %> 
+  </ul>
+<% end %>
+
+<%= form_with(model: @kitchen, local true) do |f| %>
+  <p> 
+    <%= f.label :Item_Title %><br/> 
+    <%= f.text_field :Item_Title %>
+  </p>
+  <p>
+    <%= f.label :Units %><br/> 
+    <%= f.number_field :Units %> 
+  </p>
+  <p>
+    <%= f.submit %> 
+  </p>
+<% end %>
