@@ -1,0 +1,21 @@
+<h1> Kitchen List Page </h1>
+<table>
+
+<thead>
+<tr>
+<th>Item Title</th>
+<th>Units</th>
+<th>Actions</th>
+</thead>
+
+<tbody>
+<% @kitchens.each do |kitchen| %>
+<tr>
+<td><%= kitchen.Item_Title %></td>
+<td><%= kitchen.Units %></td>
+<td><%= link_to 'Show', kitchen_path(kitchen)%></td>
+<td><%= link_to 'Delete', kitchen_path(kitchen), method: :delete %></td>
+</tr>
+<%  end %>
+</tbody>
+</table>
