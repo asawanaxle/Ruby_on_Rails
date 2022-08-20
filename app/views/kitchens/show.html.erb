@@ -1,3 +1,7 @@
 <h1> Showing Kitchen Items </h1>
 <p><strong>Kitchen Item:</strong><%= @kitchen.Item_Title %></p>
 <p><strong>Units: </strong><%= @kitchen.Units %> </p>
+
+<%= link_to 'Edit Item', edit_kitchen_path(@kitchen) %> |
+<%= link_to 'Delete Item', kitchen_path(@kitchen), method: :delete %> |
+<%= link_to 'Return to Item list' ,kitchens_path %>

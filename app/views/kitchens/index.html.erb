@@ -5,7 +5,7 @@
 <tr>
 <th>Item Title</th>
 <th>Units</th>
-<th>Actions</th>
+<th colspan="3">Actions</th>
 </thead>
 
 <tbody>
@@ -13,9 +13,12 @@
 <tr>
 <td><%= kitchen.Item_Title %></td>
 <td><%= kitchen.Units %></td>
+<td><%= link_to 'Edit', edit_kitchen_path(kitchen)%></td>
 <td><%= link_to 'Show', kitchen_path(kitchen)%></td>
 <td><%= link_to 'Delete', kitchen_path(kitchen), method: :delete %></td>
 </tr>
 <%  end %>
 </tbody>
 </table>
+<br /><br />
+<%= link_to 'Add new Item', new_kitchen_path  %>

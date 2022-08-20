@@ -25,9 +25,9 @@ class KitchensController < ApplicationController
     end
 
     def update
-        @article = Article.find(params[:id])
-        if @article.update(params.require(:kitchen).permit(:Item_Title,:Units))
-            flash[:notice] = "Article was updated successfully"
+        @kitchen = Kitchen.find(params[:id])
+        if @kitchen.update(params.require(:kitchen).permit(:Item_Title,:Units))
+            flash[:notice] = "Item edited successfully"
             redirect_to @kitchen
         else
             render 'edit'

@@ -1,6 +1,4 @@
 <h1>Edit Items</h1>
-
-
 <% if @kitchen.errors.any? %> 
   <h2>The following errors prevented the article from being saved</h2> 
   <ul> 
@@ -10,7 +8,7 @@
   </ul>
 <% end %>
 
-<%= form_with(model: @kitchen, local true) do |f| %>
+<%= form_with(model: @kitchen, local: true) do |f| %>
   <p> 
     <%= f.label :Item_Title %><br/> 
     <%= f.text_field :Item_Title %>
